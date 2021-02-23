@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "MyError";
+}
+
+<h2>MyIndexError</h2>
+<p>this is my Error about function Index !!!</p>
+@Model.Exception.GetType().Name<br />
+@Model.Exception.Message<br />
+@Model.ControllerName<br />
+@Model.ActionName<br />
+@Model.Exception.StackTrace<br />
+
