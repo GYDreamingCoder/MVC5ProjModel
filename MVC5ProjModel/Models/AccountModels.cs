@@ -30,8 +30,6 @@ namespace MVC5ProjModel.Models
     }
 
     public class logOnModel {
-        [Key]
-
         [Required]
         [Display(Name ="User Name")]
         public string UserName { get; set; }
@@ -46,6 +44,7 @@ namespace MVC5ProjModel.Models
     }
 
     public class RegisterModel {
+        [Key]
         [Required]
         [Display(Name ="User Name")]
         public string UserName { get; set; }
@@ -63,7 +62,7 @@ namespace MVC5ProjModel.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm New Password")]
-        [System.ComponentModel.DataAnnotations.Compare("NewPassword", ErrorMessage = "not Same!!!!")]
+        [System.ComponentModel.DataAnnotations.Compare("Password", ErrorMessage = "the value is not same with Password!!!!")]
         public string ConfirmPassword { get; set; }
     }
 }

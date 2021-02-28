@@ -35,6 +35,7 @@ namespace MVC5ProjModel.Controllers
 
         /// <summary>
         /// 获取首页在售专辑
+        /// 私有方法，不被控制器外部访问
         /// </summary>
         /// <param name="count"></param>
         /// <returns></returns>

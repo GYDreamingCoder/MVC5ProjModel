@@ -15,6 +15,6 @@ namespace MVC5ProjModel.Models
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
-        public System.Data.Entity.DbSet<MVC5ProjModel.Models.logOnModel> logOnModels { get; set; }
+        public System.Data.Entity.DbSet<MVC5ProjModel.Models.RegisterModel> RegisterModels { get; set; }
     }
 }
