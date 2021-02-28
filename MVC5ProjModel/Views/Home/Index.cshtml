@@ -1,0 +1,54 @@
+﻿@model List<MVC5ProjModel.Models.Album>
+@{ ViewBag.Title= "Music Store";}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@section script{
+    <script>
+    </script>
+}
+@section css{
+    <style>
+    </style>
+}
+
+    <div id="promotion"></div>
+    <h3><em>Fresh</em>off the grill</h3>
+    <ul id="album-list">
+        @foreach (var item in Model)
+        {
+        <li><a href="@Url.Action("Details","Store",new {id=item.AlbumId })">
+                <img src="@item.AlbumArtUrl" alt="@item.Title" />
+                <span>@item.Title</span>
+            </a></li>
+
+        }
+        <li></li>
+        <li></li>
+    </ul>
+    @*@foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AlbumArtUrl)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.AlbumId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.AlbumId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.AlbumId })
+                </td>
+            </tr>
+        }*@
+
